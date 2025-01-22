@@ -99,6 +99,13 @@ var PageTransitions = (function ($, options) {
         });
     }
 
+ /**
+  * The function `getActiveSection` returns the hash value of the active section or sets it to the first section with the
+  * class 'animated-section' if no hash value is present.
+  * @returns If `location.hash` is empty, the function will set `location.hash` to the `data-id` attribute of the first
+  * `section` element with the class `animated-section` and return that value. If `location.hash` is not empty, the
+  * function will return the current value of `location.hash`.
+  */
     function getActiveSection() {
         if(location.hash === "") {
             return location.hash = $('section.animated-section').first().attr('data-id');
