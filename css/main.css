@@ -1427,8 +1427,15 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .certi-logo img {
-  display: block;
-  max-width: 100%;
+   display: block; 
+   object-fit: cover; 
+   max-width: 100%; 
+
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover; */
+
+
 }
 
 .certi-content {
@@ -3025,4 +3032,10 @@ blockquote {
 {
   display: unset;
 
+}
+
+/* Resume Page CSS*/
+.skills-second-style .clearfix i {
+  color: #04b4e0;
+  padding-right: 10px;
 }

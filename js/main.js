@@ -62,6 +62,32 @@
             });
         }
     }
+
+
+/* NEW FUNCTIONS */  
+   function modalSetUp(){
+    var modal = $('#modal');
+
+    $('#openModal').on('click', function() {
+        modal.show();
+    });
+
+    $('.close-button').on('click', function() {
+        modal.hide();
+    });
+
+    $(window).on('click', function(event) {
+
+        if ($(event.target).is(modal)) {
+            modal.hide();
+        }
+
+    });
+   }
+
+/* end NEW FUNCTIONS */
+
+
     // /Custom scroll
 
     // Contact form validator
@@ -311,6 +337,9 @@
                 src = 'https://maps.google.com/maps?q=' + address + '&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&output=embed';
             $(".lmpixels-map iframe").attr("src", src);
         }
+
+        //Modal SetUp
+        modalSetUp();
     });
 
 })(jQuery);
