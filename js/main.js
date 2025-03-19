@@ -83,6 +83,8 @@
         }
 
     });
+
+    console.log("ModalSetup");
    }
 
 /* end NEW FUNCTIONS */
