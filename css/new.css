@@ -1,7 +1,8 @@
 
 
 .modal-window {
-  position: fixed;
+
+ position: fixed; 
   top: 0;
   right: 0;
   bottom: 0;
@@ -20,16 +21,16 @@
     pointer-events: auto;
   }
   .modal {
-    width: 60rem;
+    width: 55rem;
     padding: 2em;
-    background: white;
+    background: #444444;
     position: relative;
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
   }
   .modal-close {
-    color: #aaa;
-    font-size: 80%;
+    color: #dde6ef;
+    font-size: 150%;
     position: absolute;
     right: 0;
     top: 0;
