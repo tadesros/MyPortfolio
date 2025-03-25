@@ -1,0 +1,161 @@
+<html>
+
+<head>
+<title>""</title>
+</head>
+
+
+<body>
+
+<div id="ajax-page" class="ajax-page-content">
+
+
+    <div class="ajax-page-wrapper">
+
+        <!--Left / Right Page-->
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-3.html"><i class="lnr lnr-chevron-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-2.html"><i class="lnr lnr-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="lnr lnr-cross"></i></a>
+            </div>
+        </div>
+        <!--Title-->
+        <div class="ajax-page-title">
+            <h1>Implement Gesture Activated Camera on a ATMEL SAM</h1>
+        </div>
+        <!--ROW-->
+        <div class="row">
+
+            <!--Left Side Content-->
+            <div class="col-sm-8 col-md-8 portfolio-block">
+
+                        <!-- Project Details -->
+                        
+                            <h3>Project Overview</h3>
+
+                            <p>
+                                This document presents the final individual project for EEE 5264, Advanced Microprocessors, at Lawrence Technological University. The project, requiring the implementation of a real-world task using ARM assembly, culminated in a 15-minute technical demonstration to the class. The course focused on the design and application of ARM microcomputers, with a strong emphasis on ARM assembly language programming.
+
+                            </p>
+
+                            <p>
+                                    This project implemented I2C communication between a TI Tiva C Series (TM4C123G) board and a Sparkfun ZX Gesture Sensor. Gesture data was read from the sensor and stored in register 0x06 of the Tiva board. 
+
+                                    The values received and stored from the gesture sensor:
+
+                                    <ul>
+                                        <li>0x01: Right</li>
+                                        <li>0x02: Left</li>
+                                        <li>0x03: Up</li>
+                                        <li>0x04: Down</li>                          
+                                    </ul>
+
+                            </p>        
+                            
+                            
+                            <!--Add Figures-->
+                            <div class="d-flex justify-content-around">
+                                <a href="/img/portfolio/launchpad-tivac-02_1.jpg" data-lightbox="launchpad">
+                                                    <figure>
+                                                     
+                                                        <img src="/img/portfolio/launchpad-tivac-02_1.jpg" alt="Tiva Launchpad" width="200" height="200"> 
+                                                        <figcaption>TI Tiva TM4C123G board</figcaption> 
+                                                         
+                                                    </figure>       
+                                </a>
+
+                                <a href="/img/portfolio/zx-product-cropped_1.jpg" data-lightbox="launchpad">  
+                                                    <figure>
+                                                        <img src="/img/portfolio/zx-product-cropped_1.jpg" alt="Tiva Launchpad" width="200" height="200">  
+                                                        <figcaption>Sparkfun ZX Gesture Sensor</figcaption>            
+                                                    </figure>
+                                </a>
+                            </div>
+
+                            <!-- Project Carousel -->
+                            <div class="owl-carousel portfolio-page-carousel">
+                                <div class="item">
+                                    <img src="img/portfolio/full/1.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="img/portfolio/full/2.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="img/portfolio/full/3.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <!--Carousel Javascript-->
+                            <script type="text/javascript">
+                                jQuery(document).ready(function($){
+                                    $('.portfolio-page-carousel').imagesLoaded(function(){
+                                        $('.portfolio-page-carousel').owlCarousel({
+                                            smartSpeed:1200,
+                                            items: 1,
+                                            loop: true,
+                                            dots: true,
+                                            nav: true,
+                                            navText: false,
+                                            margin: 10,
+                                            autoHeight:true
+                                        });
+                                    });
+                                });
+                            </script>
+            </div><!--/col-sm-8-->
+            <!--Right Side Description-->
+            <div class="col-sm-4 col-md-4 portfolio-block">
+                <!-- Project Description -->
+                <div class="project-description">
+                    <div class="block-title">
+                        <h3>Description</h3>
+                    </div>
+                    <ul class="project-general-info">
+                        <li><p><i class="fa fa-user"></i>Tom DesRosiers</p></li>
+                        <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">GitHub Repo</a></p></li>
+                        <!-- <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li> -->
+                    </ul>
+
+                    <p class="text-justify">This is the final individual project for the Advanced Microprocessors graduate course (EEE 5264) at Lawrence Technological University. The project demonstrates the implementation of a real world task using ARM assembly, which was the focus of the course.</p>
+                    <!-- /Project Description -->
+
+                    <!-- Technology -->
+                    <div class="tags-block">
+                        <div class="block-title">
+                            <h3>Technology</h3>
+                        </div>
+                        <ul class="tags">
+                            <li><a>C</a></li>
+                            <li><a>Kiel Embedded Kit</a></li>
+                            <li><a>Atmel Assembly</a></li>         
+                           
+                        </ul>
+                    </div>
+                    <!-- /Technology -->
+
+                    <!-- Share Buttons -->
+                    <!-- <div class="btn-group share-buttons">
+                        <div class="block-title">
+                            <h3>Share</h3>
+                        </div>
+                        <a href="#" target="_blank" class="btn"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" target="_blank" class="btn"><i class="fab fa-twitter"></i> </a>
+                        <a href="#" target="_blank" class="btn"><i class="fab fa-dribbble"></i> </a>
+                    </div> -->
+                    <!-- /Share Buttons -->
+                </div>
+                <!-- Project Description -->
+            </div>
+        </div><!--/row-->
+    </div>
+
+</div>
+
+
+
+</body>
+
+</html>
