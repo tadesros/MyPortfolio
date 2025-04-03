@@ -60,3 +60,18 @@
   padding-bottom: 1rem;
 }
 
+.formatPre{
+
+ 
+  color: #f2ecec;
+  
+  font-family: monospace;
+  font-size: 15px;
+  /* line-height: 1.6; */
+  margin-bottom: 1.6em;
+  /* max-width: 100%; */
+
+  /*padding: 1em 1.5em; */
+
+  /* word-wrap: break-word;  */
+}
