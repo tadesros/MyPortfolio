@@ -50,3 +50,13 @@
   left: 0;
   margin: 0;
 }
+
+.colorBlue {
+  color: #0099cc;  
+}
+
+.paddingPageElement{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
