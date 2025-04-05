@@ -75,3 +75,41 @@
 
   /* word-wrap: break-word;  */
 }
+
+
+/* Carousel */
+/* .splide__slide img {
+  width: 100%;
+  height: 80%;
+}   */
+
+/* .sample-slider {
+  width: 100%;
+  margin: 0 auto;
+} */
+ /* .sample-slider img {
+  width: 100%;
+  height: 40%;
+}  */
+
+/* Change the frame color */
+.sample-slider .splide__arrow {
+  background: rgb(39, 39, 36);
+}
+/* Change the arrows color */
+.sample-slider .splide__arrow svg {
+  fill: #0099cc;
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: #1f1e1e; 
+} 
+
+.justifyCenter{
+  display: flex !important;
+  justify-content: center !important;
+  
+}
