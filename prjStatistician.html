@@ -109,7 +109,7 @@
         </div>
         <!--/row main content-->
 
-        <!--row CODE Example  -->
+        <!--row main.cpp CODE Example  -->
         <div class="row" style="padding-top: 20px;">
             <div class="col-sm-11 col-md-11">
 
@@ -123,7 +123,7 @@
                                     * Author: Tom
                                     *
                                     */
-                                    #include cstdlib;
+                                    #include cstdlib&lt;div&gt;
                                     #include "stats.h"
 
                                     using namespace std;
@@ -154,12 +154,12 @@
                                       maxResult = Stat1.maximum();
                                       minResult = Stat1.minimum();
                                       
-                                      cout<<"Stat1"<<endl;
-                                      cout<<"Length :"<<lengthResult<<endl;
-                                      cout<<"Mean :"<<meanResult<<endl;
-                                      cout<<"Sum: "<<sumResult<<endl;
-                                      cout<<"Max: "<<maxResult<<endl;
-                                      cout<<"Min: "<<minResult<<endl;
+                                      cout&lt;&lt;"Stat1"&lt;&lt;endl;
+                                      cout&lt;&lt;"Length :"&lt;&lt;lengthResult&lt;&lt;endl;
+                                      cout&lt;&lt;"Mean :"&lt;&lt;meanResult&lt;&lt;endl;
+                                      cout&lt;&lt;"Sum: "&lt;&lt;sumResult&lt;&lt;endl;
+                                      cout&lt;&lt;"Max: "&lt;&lt;maxResult&lt;&lt;endl;
+                                      cout&lt;&lt;"Min: "&lt;&lt;minResult&lt;&lt;endl;
                                       
                                       //Stat2
                                       Stat2.next(5);
@@ -173,13 +173,267 @@
                                       
 
                                       return 0;
-                                    }           
+                                    }
+                  
                     </code>
                 </pre> <!--/Code Example-->
 
 
             </div>
-        </div><!--/row Code example-->
+        </div><!--/end main.cpp example-->
+
+        <!--row stats.h CODE Example  -->
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-sm-11 col-md-11">
+
+             <h3 class="hPadding">stats.h - statistician class header file</h3>
+
+              <!--Code Example-->
+              <pre class="scrollable-code"> 
+                  <code class="language-cpp">
+                    // FILE: stats.h
+                    // CLASS PROVIDED: Statistician
+                    //   (a class to keep track of statistics on a sequence of real numbers)
+                    //
+                    // CONSTRUCTOR for the Statistician class:
+                    //   Statistician( );
+                    //     Postcondition: The object has been initialized, and is ready to accept
+                    //     a sequence of numbers. Various statistics will be calculated about the
+                    //     sequence.
+                    //
+                    // PUBLIC MODIFICATION member functions for the Statistician class:
+                    //   void next(double r)
+                    //     The number r has been given to the statistician as the next number it
+                    //     its sequence of numbers.
+                    //   void reset( );
+                    //     Postcondition: The statistician has been cleared, as if no numbers had
+                    //     yet been given to it.
+                    //   
+                    // PUBLIC CONSTANT member functions for the Statistician class:
+                    //   int length( ) const
+                    //     Postcondition: The return value is the length of the sequence that has
+                    //     been given to the statistician (i.e., the number of times that the
+                    //     next(r) function has been activated).
+                    //   double sum( ) const
+                    //     Postcondition: The return value is the sum of all the numbers in the
+                    //     statistician's sequence.
+                    //   double mean( ) const
+                    //     Precondition: length( ) > 0
+                    //     Postcondition: The return value is the arithmetic mean (i.e., the
+                    //     average of all the numbers in the statistician's sequence).
+                    //   double minimum( ) const
+                    //     Precondition: lenght( ) > 0
+                    //     Postcondition: The return value is the tinyest number in the
+                    //     statistician's sequence.
+                    //   double maximum( ) const
+                    //     Precondition: length( ) > 0
+                    //     Postcondition: The return value is the largest number in the
+                    //     statistician's sequence.
+                    //
+                    // NON-MEMBER functions for the Statistician class:
+                    //   Statistician operator +(const Statistician& s1, const Statistician& s2)
+                    //     Postcondition: The statistician that is returned contains all the
+                    //     numbers of the sequences of s1 and s2.
+                    //   Statistician operator *(double scale, const Statistician& s)
+                    //     Postcondition: The statistician that is returned contains the same
+                    //     numbers that s does, but each number has been multiplied by the
+                    //     scale number.
+                    //   bool operator ==(const Statistician& s1, const Statistician& s2)
+                    //     Postcondition: The return value is true if s1 and s2 have the same
+                    //     length. Also, if the length is greater than zero, then s1 and s2 must
+                    //     have the same mean, the same minimum, and the same maximum, and the
+                    //     same sum.
+                    //     
+                    // VALUE SEMANTICS for the Statistician class:
+                    // Assignments and the copy constructor may be used with Statistician objects.
+                    #ifndef STATS_H     // Prevent duplicate definition
+                    #define STATS_H
+                    #include <iostream>
+                    
+                    using namespace std;
+                    
+                        class Statistician
+                        {
+                        public:
+                            // CONSTRUCTOR
+                            Statistician( );
+                            // MODIFICATION MEMBER FUNCTIONS
+                            void next(double r);
+                            void reset( );
+                            // CONSTANT MEMBER FUNCTIONS
+                            int length( ) const { return count; }
+                            double sum( ) const { return total; }
+                            double mean( ) const;
+                            double minimum( ) const;
+                            double maximum( ) const;
+                            // FRIEND FUNCTIONS
+                            friend Statistician operator +
+                                (const Statistician& s1, const Statistician& s2);
+                            friend Statistician operator *
+                                (double scale, const Statistician& s);
+                        friend istream&amp; operator &gt;&gt;
+                          (istream&, Statistician& s1); 
+                        private:
+                            int count;       // How many numbers in the sequence
+                            double total;    // The sum of all the numbers in the sequence
+                            double tinyest;  // The smallest number in the sequence
+                            double largest;  // The largest number in the sequence
+                        };
+                    
+                        // NON-MEMBER functions for the Statistician class
+                        bool operator ==(const Statistician& s1, const Statistician& s2);
+                        
+                        
+                    #endif /* STATS_H */
+                    
+                            
+                
+                  </code>
+              </pre> <!--/Code Example-->
+
+
+          </div>
+        </div><!--/end stats.h example-->
+
+        <!--row stats.cpp CODE Example  -->
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-sm-11 col-md-11">
+
+             <h3 class="hPadding">stats.cpp - statistician class implementation file</h3>
+
+              <!--Code Example-->
+              <pre class="scrollable-code"> 
+                  <code class="language-cpp">
+                    // CLASS IMPLEMENTED: Statistician (see stats.h for documentation)
+                    #include &lt;assert.h&gt;   // Provides assert
+                    #include &lt;ctype.h&gt;    // Provides isspace
+                    #include &lt;iostream&gt; // Provides istream class
+                    #include "stats.h"
+
+                    using namespace std;
+
+                    Statistician::Statistician( )
+                    {
+                        reset( );
+                    }
+
+                    void Statistician::next(double r)
+                    {
+                        total += r;
+                        count++;
+                        if ((count == 1) || (r &lt; tinyest))
+                            tinyest = r;
+                        if ((count == 1) || (r &gt;largest))
+                            largest = r;
+                    }
+
+                    void Statistician::reset( )
+                    {
+                        count = 0;
+                        total = 0;
+                    }
+
+                    double Statistician::mean( ) const
+                    // Library facilities used: assert.h
+                    {
+                        assert(length() &gt; 0);
+                        return total/count;
+                    }
+
+                    double Statistician::minimum( ) const
+                    // Library facilities used: assert.h
+                    {
+                        assert(length( ) &gt; 0);
+                        return tinyest;
+                    }
+
+                    double Statistician::maximum( ) const
+                    // Library facilities used: assert.h
+                    {
+                        assert(length( ) &gt;  0);
+                        return largest;
+                    }
+
+
+
+                    Statistician operator +(const Statistician& s1, const Statistician& s2)
+                    {
+                        Statistician answer;
+
+                        if (s1.count == 0)
+                      answer = s2;
+                        else if (s2.count == 0)
+                      answer = s1;
+                        else
+                        {
+                      answer.count = s1.count + s2.count;
+                      answer.total = s1.total + s2.total;
+                      answer.tinyest = (s1.tinyest &lt;= s2.tinyest) ? s1.tinyest : s2.tinyest;
+                      answer.largest = (s1.largest &gt;= s2.largest) ? s1.largest : s2.largest;
+                        }
+                        return answer;
+                    }
+
+
+
+                    Statistician operator *(double scale, const Statistician& p)
+                    {
+                        Statistician answer;
+
+                        answer.count = p.count;
+                        answer.total = scale * p.total;
+                        if (scale &gt;= 0)
+                        {
+                      answer.tinyest = scale * p.tinyest;
+                      answer.largest = scale * p.largest;
+                        }
+                        else
+                        {
+                      answer.tinyest = scale * p.largest;
+                      answer.largest = scale * p.tinyest;
+                        }
+                        return answer;
+                    }
+
+                    bool operator ==(const Statistician& s1, const Statistician& s2)
+                    {
+                        if ((s1.length( ) == 0) || (s2.length( ) == 0))
+                            return (s1.length( ) == 0) && (s2.length( ) == 0);
+                        else return (s1.length( ) == s2.length( ))
+                                &&  (s1.mean( ) == s2.mean( ))
+                          &&  (s1.minimum( ) == s2.minimum( ))
+                          &&  (s1.maximum( ) == s2.maximum( ))
+                          &&  (s1.sum( ) == s2.sum( ));
+                    }
+
+
+                    istream& operator &gt;&gt;(istream& ins, Statistician& target)
+                    {
+                        double user_input;
+
+                        while (ins && (ins.peek( ) != ';'))
+                        {
+                      if (isspace(ins.peek( )))
+                          ins.ignore( );
+                      else
+                      {
+                          ins &gt;&gt; user_input;
+                          target.next(user_input);
+                      }
+                        }
+                        ins.ignore( );
+
+                        return ins;
+                    }               
+                  </code>
+              </pre> <!--/Code Example-->
+
+
+          </div>
+        </div><!--/end stats.cpp example-->
+
+
+
     </div><!--/ajax-page-wrapper-->
 
 </div><!--/outside Page-->
