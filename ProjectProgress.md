@@ -17,5 +17,5 @@ HOME
 About Me
 ----------
 
-TODO - Color Icons
+
 

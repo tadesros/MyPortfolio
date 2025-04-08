@@ -1509,11 +1509,14 @@ textarea.form-control, textarea.form-control:focus {
 
 .portfolio-filters li.active {
   opacity: 1;
+  font-weight: 600; 
+  
 }
 
 .portfolio-filters li a {
-  color: #aaa;
+  /* color: #aaaaaa; */
   cursor: pointer;
+  color: #04b4e0;
 }
 
 .portfolio-grid {
