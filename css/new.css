@@ -128,6 +128,6 @@
 
 
 .scrollable-code {
-  max-height: 400px; /* Adjust the height as needed */
+  max-height: 900px; /* Adjust the height as needed */
   overflow-y: auto;  /* Enable vertical scrollbar */
 }
