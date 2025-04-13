@@ -1339,7 +1339,7 @@
                         <h4>Have a question, opportunity, or just want to say hello? Feel free to reach out using the form below<br><span class="linkColor">I'd love to hear from you!</span></h4>
                       </div>
 
-                      <form netlify name="contact" id="contact_form"  class="contact-form">
+                      <form netlify method="POST" name="contact" id="contact_form"  class="contact-form">
 
 
                       <!-- <form name="contact" id="contact_form" data-netlify="true" class="contact-form" action="contact_form/contact_form.php" method="post"> -->
@@ -1391,7 +1391,9 @@
 
                           <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-theme="dark"></div>
       
-                          <input type="submit" class="button btn-send" value="Send message">
+                          <!-- <input type="submit" class="button btn-send" value="Send message"> -->
+                          <button type="submit" class="button btn-send" value="Send message"></button>
+                          
                         </div>
                       </form>
                     </div>
