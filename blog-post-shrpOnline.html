@@ -126,7 +126,7 @@
                     </div>
                     <!-- /Entry meta -->
 
-                    <h2 class="entry-title">Transitioning from SharePoint Online</h2>
+                    <h2 class="entry-title">Transitioning to SharePoint Online</h2>
                   </header>
                   <!-- /Entry header -->
 
@@ -135,7 +135,7 @@
                     <div class="row">
                       <div class=" col-xs-12 col-sm-12 ">
                         <div class="col-inner">
-                          <p>First Paragraph</p>
+                          <p>We are currently operating a highly customized SharePoint On-Premises environment. With Microsoft's scheduled end of support for SharePoint Server 2016 on July 14, 2026, we are beginning the transition planning process to SharePoint Online. A key part of this effort involves identifying the technologies and tools we need to learn to replicate and enhance the functionality of our existing intranet.</p>
                           
                           <!-- <blockquote class="quote">Maecenas id finibus felis. Etiam vitae nibh et felis efficitur pellentesque. Mauris suscipit sapien nunc, a lacinia nibh feugiat ut. In hac habitasse platea dictumst.
                             <footer class="quote-author">
@@ -143,9 +143,27 @@
                             </footer>
                           </blockquote> -->
 
-                          <p>Second Paragraph</p>
+                          <p>At present, our customizations heavily rely on direct code injection using JavaScript, HTML, and CSS, typically implemented through Script Editor Web Parts. These enable us to create dynamic user interfaces and enhance functionality. We frequently use the Bootstrap framework to streamline styling and UI components.</p>
 
-                          <p>Third paragraph</p>
+                          <p>However, SharePoint Online does not support direct code injection for security reasons. Instead, similar functionality must be implemented using the SharePoint Framework (SPFx). SPFx allows for developing secure, client-side web parts and extensions using TypeScript, React, and other modern web technologies. While SPFx offers powerful capabilities, it comes with a steeper learning curve and a different development model—one that involves creating independent, modular applications hosted within SharePoint.</p>
+
+                          <p>In addition to SPFx, we anticipate leveraging Power Apps as an alternative to script-based form customizations. Power Apps will allow us to design user-friendly, interactive forms that can read from and write to SharePoint lists, without relying on custom web parts.</p>
+
+                          <p>We also maintain several business workflows in our current environment, built using SharePoint Designer and running on-premises. As part of our migration, we plan to transition these workflows to Microsoft Power Automate, the cloud-based successor that integrates tightly with SharePoint Online and other Microsoft 365 services.
+                          </p>
+
+                          <p>One of the more unique challenges we anticipate is replicating our custom page navigation. For example, our current homepage includes a navigation component featuring interactive circular elements that rotate around a central hub. Rebuilding this feature may require the use of a React-based library within SPFx to maintain both visual design and functionality in SharePoint Online.
+                          </p>
+
+                          <p>Given the tight integration between SharePoint Online and Microsoft 365 (O365), gaining a solid understanding of O365 administration is also essential as part of our transition. To support this, we’ve identified an online learning provider that offers comprehensive training in Power Apps and Power Automate development, which will be instrumental in rebuilding and enhancing our current solutions.</p>
+
+                          <p>
+                            On a personal note, I’m also interested in pursuing Microsoft certifications to deepen my expertise and validate my skills in these technologies.
+                          </p>
+
+
+
+
                         </div>
                       </div>
                     </div>
