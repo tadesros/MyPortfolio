@@ -699,6 +699,7 @@ input[type="text"] {
 
 textarea.form-control, textarea.form-control:focus {
   height: auto;
+  height: 300px;
 }
 
 .form-control ~ .form-control-border {
